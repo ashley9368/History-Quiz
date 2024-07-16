@@ -99,29 +99,17 @@ main {
     font-size: 17px;
 }
 /* Quiz Page CSS */
-.quiz-area {
-    background-color: aliceblue;
-    flex: 1 0 auto;
-}
 
-/* Game control area, Buttons etc */
-.game-controls {
-    flex-direction: column; 
+.container {
+    justify-content: center;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-top: 15rem;
-}
-
-.game-controls button {
-    width: 300px; /* Adjust width to make buttons wider */
-    height: 80px; /* Adjust height to make buttons taller */
-    font-size: 24px; /*Adjust font size for button text */
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    background-color: #ffffff;
+    padding: 30px;
+    height: 20vh;
+    max-width: 80%;
+    width: 100%;
+    margin: 80% 10%; /* To make sure there is space left and right of the container */
 }
 
 /* Footer CSS across all pages */
