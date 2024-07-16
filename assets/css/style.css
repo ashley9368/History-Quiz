@@ -21,6 +21,11 @@ body {
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
 }
 
+main {
+    flex: 1 0 auto;
+}
+
+/* Navbar */
 .navbar {
     background-color: rgb(35, 255, 255);
     justify-content: center;
@@ -71,4 +76,4 @@ body {
     padding: 15px;
     list-style: none;
     gap: 5.5rem;
-
+}
