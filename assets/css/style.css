@@ -1,9 +1,41 @@
+/* Wildcard slector to override default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    min-height: 100vh; /* To push footer to the bottom of the page taking up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
 .heading {
+    justify-content: center; /* To center header */
+    display: flex;
+    margin-top: 10px;
+    font-size: 50px; /* Size of font in header */
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+}
+
+.navbar {
+    background-color: rgb(35, 255, 255);
     justify-content: center;
     display: flex;
-    margin-top: 50px;
-    font-size: 50px;
-    font-family: 'Comic Neue', sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 9rem;
+    padding: 0.3rem;
+}
+
+.quiz-area {
+    background-color: aliceblue;
+    flex: 1 0 auto;
 }
 
 /* Game control area, Buttons etc */
@@ -25,4 +57,17 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+/* Footer */
+.footer {
+    background-color: rgb(35, 255, 255);
+    text-align: center;
+}
+
+.social-icons { 
+    justify-content: center; /* To center social icons and spread them out */
+    display: flex;
+    padding: 1rem;
+    list-style: none;
+    gap: 5rem;
 
