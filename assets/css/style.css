@@ -16,6 +16,7 @@ body {
     justify-content: center; /* To center header */
     display: flex;
     margin-top: 10px;
+    margin-bottom: 10px; /* Margin bottom to create space between navbar and header */
     font-size: 50px; /* Size of font in header */
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
 }
@@ -67,7 +68,7 @@ body {
 .social-icons { 
     justify-content: center; /* To center social icons and spread them out */
     display: flex;
-    padding: 1rem;
+    padding: 15px;
     list-style: none;
-    gap: 5rem;
+    gap: 5.5rem;
 
