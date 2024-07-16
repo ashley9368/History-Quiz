@@ -12,33 +12,93 @@ body {
     flex-direction: column;
 }
 
+/* Header and main CSS content across all pages */
 .heading {
     justify-content: center; /* To center header */
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px; /* Margin bottom to create space between navbar and header */
-    font-size: 50px; /* Size of font in header */
+    font-size: 38px; /* Size of font in header */
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    background-color: #124e66;
+    padding: 10px;
+    color: #ffffff;
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1 0 auto; /* Pushes content down to remove excess space */
+    background-color: #EAE7DC; /* Colour of main area */
 }
-
 /* Navbar */
 .navbar {
-    background-color: rgb(35, 255, 255);
-    justify-content: center;
+    background-color: #748D92; /* Sets colour of navbar background */
+    justify-content: center; /* Centers content */
     display: flex;
 }
 
 .navbar ul {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     display: flex;
-    gap: 9rem;
+    gap: 3.5rem; /* Provides space between navbar text */
     padding: 0.3rem;
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    font-size: 20px;
 }
 
+.navbar ul a {
+    color: white; /* Changes colour of text in navbar */
+    text-decoration: none; /* Removes the underline from the text */
+}
+
+/* Home page CSS */
+.start-area {
+    justify-content: center; /* centers the text to the middle */
+    display: flex;
+    align-items: center; 
+    height: 45vh; /* Moves content down */
+    flex-direction: column; /* Lines content vertically */
+    gap: 45px;
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    font-size: 20px;
+    padding: 38px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.quiz-start {
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #124e66;
+    color: white;
+}
+
+.quotes {
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+}
+
+.famous-quotes {
+    font-weight: bold; /* Gives text bold style */
+    color: #124e66;
+    font-size: 22px;
+}
+
+.author {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #124e66;
+    font-weight: bold;
+    font-size: 17px;
+}
+/* Quiz Page CSS */
 .quiz-area {
     background-color: aliceblue;
     flex: 1 0 auto;
@@ -64,10 +124,12 @@ main {
     cursor: pointer;
 }
 
+/* Footer CSS across all pages */
 /* Footer */
 .footer {
-    background-color: rgb(35, 255, 255);
+    background-color: #124e66;
     text-align: center;
+    font-size: 22px;
 }
 
 .social-icons { 
@@ -75,5 +137,9 @@ main {
     display: flex;
     padding: 15px;
     list-style: none;
-    gap: 5.5rem;
+    gap: 3.8rem;
+}
+
+.social-icons a {
+    color: white;
 }
