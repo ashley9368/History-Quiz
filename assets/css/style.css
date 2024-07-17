@@ -98,18 +98,33 @@ main {
     font-weight: bold;
     font-size: 17px;
 }
-/* Quiz Page CSS */
 
+/* Quiz Page CSS */
 .container {
+    margin-top: 6rem;
+    background-color: #124E66;
     justify-content: center;
     display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 30px;
-    height: 20vh;
-    max-width: 80%;
-    width: 100%;
-    margin: 80% 10%; /* To make sure there is space left and right of the container */
+    width: 800px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 1px 2px;
+}
+
+.btn-grid{
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #748D92;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 /* Footer CSS across all pages */
