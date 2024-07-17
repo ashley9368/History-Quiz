@@ -125,6 +125,26 @@ main {
     color: #ffffff;
     padding: 5px;
     border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    border-color: orange;
+}
+
+#question {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.start-btn, .next-question-btn {
+    font-size: 70px;
+}
+
+.hide {
+    display: none;
 }
 
 /* Footer CSS across all pages */
