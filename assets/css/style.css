@@ -112,6 +112,7 @@ main {
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0 0 1px 2px;
+    height: 60vh;
 }
 
 .btn-grid{
@@ -140,7 +141,8 @@ main {
 }
 
 .start-btn, .next-question-btn {
-    font-size: 70px;
+    font-size: 40px;
+    padding: 10px;
 }
 
 .hide {
