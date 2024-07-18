@@ -4,6 +4,21 @@ const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question'); // Get the element to display answer buttons
 const answerButtonsElement = document.getElementById('answer-buttons');
 
+const quizQuestions = [
+  {
+  question: "What year did the first World War start?",
+  answers: ['1914', '1916', '1918', '1920'],
+  correctAnswer: 0
+},
+{
+  question: "Who painted the Mona Lisa?",
+  answers: ['Leonardo da Vinci', 'Pablo Picasso', 'Vincent van Gogh', 'Michelangelo'],
+  correctAnswer: 0
+},
+];
+
+let currentQuestionIndex = 0;
+
 // Event listener for starting quiz
 startButton.addEventListener('click', beginQuiz);
 
@@ -16,20 +31,38 @@ function beginQuiz() {
 }
 
 function showQuestion() {
-  questionElement.innerText = "What year did the first world war start?";
+  const currentQuestion = quizQuestions[currentQuestionIndex]; // Get current question object from array
+  questionElement.innerText = currentQuestion.question; // Display current question text
   answerButtonsElement.innerHTML = '';
 
-  const answers = [
-    '1914',
-    '1916',
-    '1918',
-    '1920'
-  ];
-
-  answers.forEach(answer => {
-    const button = document.createElement('button');
-    button.innerText = answer;
-    button.classList.add('btn');
-    answerButtonsElement.appendChild(button);
-  });
+currentQuestion.answers.forEach((answer, index) => {
+  const button = document.createElement('button');
+  button.innerText = answer;
+  button.classList.add('btn');
+  button.addEventListener('click', () => checkAnswer(index));
+  answerButtonsElement.appendChild(button);
+});
 }
+
+function checkAnswer(selectedIndex) {
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+  if (selectedIndex === currentQuestion.correctAnswer) {
+    // If correct answer selected
+    if (currentQuestionIndex < quizQuestions.length - 1) {
+      // If there are more questions, move to the next question
+      currentQuestionIndex++;
+      showQuestion(); // Display next question
+    } else {
+      // If no more questions, handle quiz completetion
+      quizComplete();
+    }
+    } else {
+      // Handle incorrect answer
+      console.log('Incorrect answer');
+    }
+  }
+
+  function quizComplete() {
+    questionElement.innerText = "Quiz Complete!";
+    answerButtonsElement.innerHTML = '';
+  }
