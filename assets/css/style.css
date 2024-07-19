@@ -48,6 +48,10 @@ main {
     text-decoration: none; /* Removes the underline from the text */
 }
 
+.navbar ul a.active {
+    text-decoration: underline;
+}
+
 /* Home page CSS */
 .start-area {
     justify-content: center; /* centers the text to the middle */
@@ -68,9 +72,16 @@ main {
     cursor: pointer;
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 20px;
     background-color: #124e66;
     color: white;
+    font-weight: bold;
+}
+
+/* Hover effect on Start Quiz button */
+.quiz-start:hover {
+    background-color: #748D92;
+    color: #000000;
 }
 
 .quotes {
@@ -131,7 +142,8 @@ main {
 }
 
 .btn:hover {
-    border-color: orange;
+    background-color: #748D92;
+    color: #000000;
 }
 
 #question {
