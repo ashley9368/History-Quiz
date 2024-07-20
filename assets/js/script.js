@@ -1,12 +1,78 @@
-// Variables
-const startButton = document.getElementById('start-btn'); 
-const questionContainer = document.getElementById('question-container');
-const questionElement = document.getElementById('question'); // Get the element to display answer buttons
-const answerButtonsElement = document.getElementById('answer-buttons');
+const startButton = document.getElementById('start-btn')
+const questionContainerElement = document.getElementById('question-container')
+
+startButton.addEventListener('click', startQuiz)
+
+let currentQuestionIndex = 0;
+
+function startQuiz() {
+  console.log('Started Quiz')
+  startButton.classList.add('hide')
+  questionContainerElement.classList.remove('hide')
+  showQuestion();
+} 
+
+function setNextQuestion() {
+
+}
+
+function selectAnswer() {
+  
+}
+
+function showQuestion() {
+  const questionElement = document.getElementById('question');
+  const answerButtonsElement = document.getElementById('answer-buttons');
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+
+  // Clear last question
+  questionElement.innerHTML = '';
+  answerButtonsElement.innerHTML = '';
+
+  // Display New Question
+  questionElement.textContent = currentQuestion.question;
+
+  // Buttons for each answer
+  for(let i =0; i < currentQuestion.answers.length; i++) {
+    const button = document.createElement('button');
+    button.innerText = currentQuestion.answers[i];
+    button.classList.add('btn')
+    button.addEventListener('click', () => checkAnswer(i));
+    answerButtonsElement.appendChild(button);
+  }
+}
+
+function checkAnswer(answerIndex) {
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+  if (answerIndex === currentQuestion.correctAnswer) {
+    alert('Correct!');
+  } else {
+    alert('Wrong!');
+  }
+
+// Move to the next question
+currentQuestionIndex++;
+
+// Move to next question or end quiz
+if (currentQuestionIndex >= quizQuestions.length) {
+  endQuiz();
+} else {
+  showQuestion();
+}
+}
+
+function endQuiz() {
+  const questionElement = document.getElementById('question');
+  const answerButtonsElement = document.getElementById('answer-buttons');
+
+  // Clear old question and answers
+  questionElement.innerHTML = '';
+  answerButtonsElement.innerHTML = '';
+}
+
 
 // Questions for quiz
-const quizQuestions = [
-  {
+const quizQuestions = [{
   question: "What year did the first World War start?",
   answers: ['1914', '1916', '1918', '1920'],
   correctAnswer: 0
@@ -18,7 +84,7 @@ const quizQuestions = [
 },
 {
   question: "Who wrote the play 'Romeo and Juliet'?",
-  answers: ['Charles Dickens', 'William Shakespeare', 'Mark Twain', 'Jana Austen'],
+  answers: ['Charles Dickens', 'William Shakespeare', 'Mark Twain', 'Jane Austen'],
   correctAnswer: 1
 },
 {
@@ -57,55 +123,3 @@ const quizQuestions = [
   correctAnswer: 0
 }
 ];
-
-let currentQuestionIndex = 0;
-
-// Event listener for starting quiz
-startButton.addEventListener('click', beginQuiz);
-
-// Begin Quiz Area
-function beginQuiz() {
-  console.log('Quiz started');
-  startButton.classList.add('hide'); // Hide the start button
-  questionContainer.classList.remove('hide'); // Unhides the question and answers
-  showQuestion(); // Displays first question and answers
-}
-
-function showQuestion() {
-  const currentQuestion = quizQuestions[currentQuestionIndex]; // Get current question object from array
-  questionElement.innerText = currentQuestion.question; // Display current question text
-  answerButtonsElement.innerHTML = '';
-
-currentQuestion.answers.forEach((answer, index) => {
-  const button = document.createElement('button');
-  button.innerText = answer;
-  button.classList.add('btn');
-  button.addEventListener('click', () => checkAnswer(index));
-  answerButtonsElement.appendChild(button);
-});
-}
-
-function checkAnswer(selectedIndex) {
-  const currentQuestion = quizQuestions[currentQuestionIndex];
-  if (selectedIndex === currentQuestion.correctAnswer) {
-    // If correct answer selected
-    if (currentQuestionIndex < quizQuestions.length - 1) {
-      // If there are more questions, move to the next question
-      currentQuestionIndex++;
-      showQuestion(); // Display next question
-    } else {
-      // If no more questions, handle quiz completetion
-      quizComplete();
-    }
-    } else {
-      // Handle incorrect answer
-      console.log('Incorrect answer');
-    }
-  }
-
-  function quizComplete() {
-    // Show "Quiz Complete!" message
-    questionElement.innerText = "Quiz Complete!";
-    // Remove answer buttons when quiz is complete
-    answerButtonsElement.innerHTML = '';
-  }

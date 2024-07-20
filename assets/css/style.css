@@ -48,6 +48,7 @@ main {
     text-decoration: none; /* Removes the underline from the text */
 }
 
+/* Adds underline of the current page the user is on */
 .navbar ul a.active {
     text-decoration: underline;
 }
@@ -159,6 +160,15 @@ main {
 
 .hide {
     display: none;
+}
+
+/* Correct and Wrong answers coloring */
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
 }
 
 /* Footer CSS across all pages */
