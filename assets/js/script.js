@@ -3,6 +3,7 @@ const startButton = document.getElementById('start-btn');
 const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const scoreHidden = document.getElementById('quiz-end-message');
 
 let currentQuestionIndex = 0;
 // Keeps track of the current question index
@@ -16,6 +17,7 @@ startButton.addEventListener('click', startQuiz);
 function startQuiz() {
   console.log('Started Quiz');
   startButton.classList.add('hide'); // Unhides the start button
+  scoreHidden.classList.add('hide'); // hides quiz score at the end
   questionContainer.classList.remove('hide'); // Unhide the question and the answers
   score = 0; // Reset Score
   currentQuestionIndex = 0; // Resets question index
@@ -78,11 +80,16 @@ function showQuestion() {
 
 function endQuiz() {
   // Show "Quiz Complete!" message along with the score
-  questionElement.innerText = `Quiz Complete! Your score is ${score}/${quizQuestions.length}.`;
-  answerButtonsElement.innerHTML = ''; // Remove answer buttons when the quiz is complete
-  questionContainer.classList.add('hide');  // Adds the 'hide' class to the questionContainer to hide it after the quiz is complete
-  const mainQuizContainer = document.querySelector('.container');// Resets the background color of the mainQuizContainer to its original state
-  mainQuizContainer.style.backgroundColor = ''; 
+  const endMessageElement = document.getElementById('quiz-end-message');
+  endMessageElement.innerText = `Quiz Complete! Your score is ${score}/${quizQuestions.length}.`;
+  endMessageElement.classList.remove('hide'); // Ensure the final message is visible
+  questionContainer.classList.add('hide'); // Hides Quiz container at the end
+
+  // Ensure background color of the main container is reset
+  const mainQuizContainer = document.querySelector('.container');
+  if (mainQuizContainer) {
+    mainQuizContainer.style.backgroundColor = '';
+  }
 }
 
 
