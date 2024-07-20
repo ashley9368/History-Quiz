@@ -5,74 +5,86 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex = 0;
-let score = 0; // Initialize the score
+// Keeps track of the current question index
+let score = 0;
+// Keeps track of the users score
 
-// Event listener for starting quiz
+// Starts Quiz
 startButton.addEventListener('click', startQuiz);
 
 // Begin Quiz Area
 function startQuiz() {
   console.log('Started Quiz');
-  startButton.classList.add('hide'); // Hide the start button
-  questionContainer.classList.remove('hide'); // Unhide the question and answers
-  score = 0; // Reset score
-  currentQuestionIndex = 0; // Reset question index
-  showQuestion(); // Displays the first question and answers
+  startButton.classList.add('hide'); // Unhides the start button
+  questionContainer.classList.remove('hide'); // Unhide the question and the answers
+  score = 0; // Reset Score
+  currentQuestionIndex = 0; // Resets question index
+  showQuestion(); // Shows first question and answers
 }
 
 function showQuestion() {
-  const currentQuestion = quizQuestions[currentQuestionIndex];
-
-  // Clear last question and reset container color
+  const currentQuestion = quizQuestions[currentQuestionIndex]; // Retrieves the current question object from the quizQuestions array based on the currentQuestionIndex
   questionElement.innerHTML = '';
   answerButtonsElement.innerHTML = '';
-  questionContainer.classList.remove('correct', 'incorrect');
-
-  // Display New Question
-  questionElement.textContent = currentQuestion.question;
-
-  // Buttons for each answer
-  for (let i = 0; i < currentQuestion.answers.length; i++) {
-    const button = document.createElement('button');
-    button.innerText = currentQuestion.answers[i];
-    button.classList.add('btn');
-    button.addEventListener('click', () => checkAnswer(i));
-    answerButtonsElement.appendChild(button);
-  }
-}
-
-function checkAnswer(answerIndex) {
-  const currentQuestion = quizQuestions[currentQuestionIndex];
+  questionContainer.classList.remove('correct', 'incorrect');  // Removes 'correct' and 'incorrect' classes from the questionContainer to reset its background color
+  questionElement.textContent = currentQuestion.question;  // Sets the text content of the questionElement to the question from the currentQuestion object
   
-  // Remove existing color class from container
-  questionContainer.classList.remove('correct', 'incorrect');
-
-  if (answerIndex === currentQuestion.correctAnswer) {
-    questionContainer.classList.add('correct'); // Add correct class
-    score++; // Increment score for correct answer
-  } else {
-    questionContainer.classList.add('incorrect'); // Add incorrect class
+  //Buttons for each answer
+  for(let i = 0; i < currentQuestion.answers.length; i++) {
+    const button = document.createElement('button'); // Creates a new button element for each answer option
+    button.innerText = currentQuestion.answers[i]; // Sets the text of the button to the answer option
+    button.classList.add('btn'); // Adds a CSS class 'btn' to the button for styling
+    button.addEventListener('click', () => checkAnswer(i)); // Adds an event listener to the button that triggers the 'checkAnswer' function with the index of the answer when the button is clicked
+    answerButtonsElement.appendChild(button); // Appends the button to the answerButtonsElement
+  }
   }
 
-  // Move to the next question
-  currentQuestionIndex++;
+  function checkAnswer(answerIndex) {
+    const currentQuestion = quizQuestions[currentQuestionIndex]; // Same as line 30
+    // Targets the main quiz container
+    const mainQuizContainer = document.querySelector('.container'); // Selects the main quiz container element by its class name and assigns it to mainQuizContainer
+    // Change the background color based on the answer
+    if (answerIndex === currentQuestion.correctAnswer) {
+      mainQuizContainer.style.backgroundColor = 'green';
+     // Sets the background color of the mainQuizContainer to green if the selected answer is correct
 
-  // Move to next question or end quiz
-  if (currentQuestionIndex >= quizQuestions.length) {
-    endQuiz();
-  } else {
-    setTimeout(showQuestion, 1000); // Add a delay before showing the next question
-  }
+     score++; 
+     // Increments the score by 1 for a correct answer 
+    } else {
+      mainQuizContainer.style.backgroundColor = 'red';
+      // Sets the background color of the mainQuizContainer to red if the selected answer is incorrect
+    }
+
+    // Goes to the next question
+    currentQuestionIndex++;
+    //Increments the question index to move to the next question
+
+    // Reset background color after a delay
+    setTimeout(() => {
+      mainQuizContainer.style.backgroundColor = '';
+      // Resets the background color of the mainQuizContainer to its original state after a 1-second delay.
+
+    // Move to next question or end quiz
+    if (currentQuestionIndex >= quizQuestions.length) {
+      endQuiz();
+      // calls the 'endQuiz' function if there are no more questions
+    } else {
+      showQuestion();
+      // Calls the 'showQuestion' function to display the next question if there are more questions
+    }
+    }, 1000);
+    // Sets a delay of 1 second before executing the code inside the setTimeout function.
 }
 
 function endQuiz() {
   // Show "Quiz Complete!" message along with the score
   questionElement.innerText = `Quiz Complete! Your score is ${score}/${quizQuestions.length}.`;
-  // Remove answer buttons when the quiz is complete
-  answerButtonsElement.innerHTML = '';
-  // Optionally hide the question container
-  questionContainer.classList.add('hide');
+  answerButtonsElement.innerHTML = ''; // Remove answer buttons when the quiz is complete
+  questionContainer.classList.add('hide');  // Adds the 'hide' class to the questionContainer to hide it after the quiz is complete
+  const mainQuizContainer = document.querySelector('.container');// Resets the background color of the mainQuizContainer to its original state
+  mainQuizContainer.style.backgroundColor = ''; 
 }
+
 
 // Questions for quiz
 const quizQuestions = [
