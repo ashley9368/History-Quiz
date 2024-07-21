@@ -9,6 +9,7 @@ const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreHidden = document.getElementById('quiz-end-message');
+const scoreElement = document.getElementById('score');
 
 let currentQuestionIndex = 0;
 // Keeps track of the current question index
@@ -27,6 +28,11 @@ function startQuiz() {
   score = 0; // Reset Score
   currentQuestionIndex = 0; // Resets question index
   showQuestion(); // Shows first question and answers
+}
+
+function UpdateScore(points) {
+  score += points;
+  scoreElement.textContent = score;
 }
 
 function showQuestion() {

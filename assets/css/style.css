@@ -127,6 +127,20 @@ main {
     height: 40vh;
 }
 
+#score-container {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background-color: #748D92;
+    padding: 3px;
+    border-radius: 15px;
+    margin: -60px auto;
+    max-width: 25%;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 #quiz-end-message{
     text-align: center;
     align-items: center;
