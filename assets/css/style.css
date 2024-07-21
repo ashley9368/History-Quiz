@@ -12,6 +12,10 @@ body {
     flex-direction: column;
 }
 
+button:hover .btn:hover {
+    background-color: #ffffff;
+}
+
 /* Header and main CSS content across all pages */
 .heading {
     justify-content: center; /* To center header */
@@ -68,15 +72,16 @@ main {
     margin-right: 25px;
 }
 
+/* Gives Quiz start button styles */
 .quiz-start {
     padding: 20px;
     cursor: pointer;
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
-    border-radius: 12px;
-    font-size: 20px;
-    background-color: #124e66;
-    color: white;
-    font-weight: bold;
+    border-radius: 12px; /* Gives start button a nice rounded style around it */
+    font-size: 20px; /* Changes font size */
+    background-color: #124e66; /* Sets background colour */
+    color: white; /* Sets text colour */ 
+    font-weight: bold; /* Makes text Bold */
 }
 
 /* Hover effect on Start Quiz button */
@@ -85,24 +90,26 @@ main {
     color: #000000;
 }
 
+/* Quotes on home page */
 .quotes {
     font-size: 16px;
     justify-content: center;
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 15px;
+    margin-left: 25px; /* Sets the margin to the left */
+    margin-right: 25px; /* Sets the margin to the right */
+    margin-bottom: 20px; /* Sets the bottom margin */
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
 }
-
+/* The Famous quotes header */
 .famous-quotes {
     font-weight: bold; /* Gives text bold style */
-    color: #124e66;
-    font-size: 22px;
+    color: #124e66; /*sets background colour */
+    font-size: 22px; /* sets font size */
 }
 
+/* Styles for authors for quotes section on home page */
 .author {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -112,19 +119,20 @@ main {
 }
 
 /* Quiz Page CSS */
+/* Quiz game box */
 .container {
-    margin-top: 6rem;
-    background-color: #124E66;
-    justify-content: center;
-    display: flex;
-    width: 800px;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 0 1px 2px;
-    height: 50vh;
+    margin-top: 6rem; /* Sets space above container */ 
+    background-color: #124E66; /* Sets background colour */
+    justify-content: center; /* Centers container */
+    display: flex; /* Centers container */
+    width: 800px; /* Sets the width for the container */
+    max-width: 90%; /* Sets the max width for the container to take up space */
+    margin-left: auto; /* Automatically sets positioning to the left */
+    margin-right: auto; /* Automatically sets positioning to the right */
+    padding: 50px; /* Sets padding around the container */
+    border-radius: 15px; /* Gives container nice rounded edges */
+    box-shadow: 0 0 1px 2px; /* Gives the container a shadow around it */
+    height: 40vh; /* Sets height of the container */
 }
 
 #score-container {
@@ -154,6 +162,7 @@ main {
     color: #ffffff;
     font-size: 20px;
     border: 2px solid black;
+    margin-bottom: 15px;
 }
 
 .btn-grid{
@@ -219,4 +228,48 @@ main {
 
 .social-icons a {
     color: white;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+/* Home Page Css for 768 and up */
+/* Header */
+.heading {
+    font-size: 60px;
+}
+/* Navbar */
+.navbar ul {
+    font-size: 26px;
+    gap: 10rem;
+}
+/* Text inside start area covering the <p> elements */
+.start-area {
+    font-size: 24px;
+}
+/* Quiz start button */
+.quiz-start {
+    font-size: 30px;
+
+}
+/* Famous quotes text */
+.famous-quotes {
+    font-size: 30px;
+}
+/* Author of Quotes */
+.author {
+    font-size: 24px;
+}
+/* The Quotes themselves */
+.quotes {
+    font-size: 22px;
+}
+/* Footer styling across all pages on 768 and up */
+.footer {
+    font-size: 30px;
+}
+/* Social Media Icons */
+.social-icons {
+    gap: 8rem;
+}
 }
