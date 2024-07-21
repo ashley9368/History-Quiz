@@ -59,12 +59,12 @@ function showQuestion() {
     // Change the background color based on the answer
     if (answerIndex === currentQuestion.correctAnswer) {
       mainQuizContainer.style.backgroundColor = 'green';
+      UpdateScore(1);
      // Sets the background color of the mainQuizContainer to green if the selected answer is correct
-
-     score++; 
      // Increments the score by 1 for a correct answer 
     } else {
       mainQuizContainer.style.backgroundColor = 'red';
+      UpdateScore(-1);
       // Sets the background color of the mainQuizContainer to red if the selected answer is incorrect
     }
 

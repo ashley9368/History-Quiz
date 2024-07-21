@@ -134,7 +134,7 @@ main {
     background-color: #748D92;
     padding: 3px;
     border-radius: 15px;
-    margin: -60px auto;
+    margin: -40px auto;
     max-width: 25%;
     font-size: 20px;
     color: #ffffff;
@@ -144,7 +144,7 @@ main {
 #quiz-end-message{
     text-align: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 60px;
     background-color: #124e66;
     padding: 20px;
     max-width: 50%;
