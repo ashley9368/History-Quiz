@@ -58,9 +58,9 @@ main {
     justify-content: center; /* centers the text to the middle */
     display: flex;
     align-items: center; 
-    height: 45vh; /* Moves content down */
+    height: 50vh; /* Moves content down */
     flex-direction: column; /* Lines content vertically */
-    gap: 45px;
+    gap: 40px;
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
     font-size: 20px;
     padding: 38px;
@@ -124,7 +124,7 @@ main {
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0 0 1px 2px;
-    height: 35vh;
+    height: 40vh;
 }
 
 #quiz-end-message{
