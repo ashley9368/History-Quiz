@@ -148,7 +148,7 @@ main {
     color: #ffffff;
     font-weight: bold;
 }
-
+/* Score throughout Quiz */
 #quiz-end-message{
     text-align: center;
     align-items: center;
@@ -218,6 +218,7 @@ main {
     font-size: 22px;
 }
 
+/* Social media icon styles */
 .social-icons { 
     justify-content: center; /* To center social icons and spread them out */
     display: flex;
@@ -272,4 +273,21 @@ main {
 .social-icons {
     gap: 8rem;
 }
+}
+
+/* Quiz page CSS */
+.btn {
+    font-size: 20px;
+}
+
+#question {
+    font-size: 26px;
+}
+
+#score-container {
+    font-size: 24px;
+}
+
+#quiz-end-message {
+    font-size: 24px;
 }
