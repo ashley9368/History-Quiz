@@ -230,6 +230,7 @@ main {
     font-family: 'Comic Neue', sans-serif; /* To apply text font */
     text-decoration: underline;
     font-size: 24px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -252,88 +253,4 @@ main {
 
 .social-icons a {
     color: white;
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-/* Home Page Css for 768 and up */
-/* Header */
-.heading {
-    font-size: 60px;
-}
-/* Navbar */
-.navbar ul {
-    font-size: 26px;
-    gap: 10rem;
-}
-/* Text inside start area covering the <p> elements */
-.start-area {
-    font-size: 24px;
-}
-/* Quiz start button */
-.quiz-start {
-    font-size: 30px;
-
-}
-/* Famous quotes text */
-.famous-quotes {
-    font-size: 30px;
-}
-/* Author of Quotes */
-.author {
-    font-size: 24px;
-}
-/* The Quotes themselves */
-.quotes {
-    font-size: 22px;
-}
-/* Footer styling across all pages on 768 and up */
-.footer {
-    font-size: 30px;
-}
-/* Social Media Icons */
-.social-icons {
-    gap: 8rem;
-}
-}
-
-/* Quiz page CSS */
-.btn {
-    font-size: 20px;
-}
-
-.start-btn {
-    font-size: 40px;
-}
-
-#question {
-    font-size: 26px;
-}
-
-#quiz-end-message {
-    font-size: 24px;
-}
-
-/* Scoreboard CSS for 768 and up */
-
-.overall-scores-container {
-    background-color: #124E66;
-    width: 800px;
-    max-width: 70%;
-    justify-content: center;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    padding: 40px;
-    height: 60vh;
-    border-radius: 40px;
-}
-
-.overall-scores-header {
-    color: #ffffff;
-    font-weight: bold;
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
-    text-decoration: underline;
 }
