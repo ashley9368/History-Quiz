@@ -191,7 +191,7 @@ main {
     font-weight: bold;
 }
 
-.start-btn, .next-question-btn {
+.start-btn {
     font-size: 40px;
     padding: 10px;
 }
@@ -208,6 +208,29 @@ main {
 
 .incorrect {
     background-color: red;
+}
+
+/* Scoreboard CSS area */
+.overall-scores-container {
+    background-color: #124E66;
+    width: 800px;
+    max-width: 90%;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 60vh;
+    border-radius: 40px;
+}
+
+.overall-scores-header {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    text-decoration: underline;
+    font-size: 24px;
+    text-align: center;
 }
 
 /* Footer CSS across all pages */
@@ -280,14 +303,37 @@ main {
     font-size: 20px;
 }
 
+.start-btn {
+    font-size: 40px;
+}
+
 #question {
     font-size: 26px;
 }
 
-#score-container {
+#quiz-end-message {
     font-size: 24px;
 }
 
-#quiz-end-message {
-    font-size: 24px;
+/* Scoreboard CSS for 768 and up */
+
+.overall-scores-container {
+    background-color: #124E66;
+    width: 800px;
+    max-width: 70%;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 40px;
+    height: 60vh;
+    border-radius: 40px;
+}
+
+.overall-scores-header {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    text-decoration: underline;
 }
