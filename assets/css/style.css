@@ -82,6 +82,7 @@ main {
     background-color: #124e66; 
     color: white; 
     font-weight: bold; 
+    text-decoration: none;
 }
 
 /* Hover effect on Start Quiz button */
@@ -232,7 +233,7 @@ main {
 }
 
 /* Social media icon styles */
-.social-icons { 
+.social-icons ul { 
     justify-content: center; 
     display: flex;
     padding: 15px;
@@ -240,7 +241,7 @@ main {
     gap: 3.8rem;
 }
 /* Colour of social button links */
-.social-icons a {
+.social-icons ul a {
     color: white;
 }
 
@@ -264,6 +265,7 @@ main {
     /* Quiz start button */
     .quiz-start {
         font-size: 30px;
+        text-decoration: none;
     
     }
     /* Famous quotes text */

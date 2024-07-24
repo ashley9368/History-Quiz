@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Variables
 const startButton = document.getElementById('start-btn'); 
 const questionContainer = document.getElementById('question-container');
@@ -38,7 +39,7 @@ function showQuestion() {
   questionElement.textContent = currentQuestion.question;  
   
   //Buttons for each answer
-  for(let i = 0; i < currentQuestion.answers.length; i++) {
+  for (let i = 0; i < currentQuestion.answers.length; i++) {
     const button = document.createElement('button'); 
     button.innerText = currentQuestion.answers[i]; 
     button.classList.add('btn'); 
