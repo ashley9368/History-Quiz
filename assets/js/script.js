@@ -1,9 +1,4 @@
 // Variables
-/* I had help from a YouTube video to help me with the structure of my JavaScript as i am 
-still learning and have struggled in my first couple of weeks with JavaScript in time i will 
-have a stronger understanding of Js and not have to rely on external sources. Please look 
-for the youtube video "Build A Quiz App With JavaScript" with the link i have provided for
-reference, Thank You.*/
 const startButton = document.getElementById('start-btn'); 
 const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
@@ -105,7 +100,6 @@ function endQuiz() {
 
 
 // Questions for quiz
-// I want to be clear that the questions and answers were sourced from chat gpt so they may not be entirely correct (but i have done research on each one the best i can to provide correct historical information)
 const quizQuestions = [
   {
     question: "What year did the first World War start?",
