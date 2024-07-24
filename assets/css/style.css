@@ -7,7 +7,7 @@
 
 /* Basic Styles */
 body {
-    min-height: 100vh; /* To push footer to the bottom of the page taking up remaining space */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
@@ -18,38 +18,38 @@ button:hover .btn:hover {
 
 /* Header and main CSS content across all pages */
 .heading {
-    justify-content: center; /* To center header */
+    justify-content: center; 
     display: flex;
-    font-size: 38px; /* Size of font in header */
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    font-size: 38px; 
+    font-family: 'Comic Neue', sans-serif;
     background-color: #124e66;
     padding: 10px;
     color: #ffffff;
 }
 
 main {
-    flex: 1 0 auto; /* Pushes content down to remove excess space */
-    background-color: #EAE7DC; /* Colour of main area */
+    flex: 1 0 auto; 
+    background-color: #EAE7DC;
 }
 /* Navbar */
 .navbar {
-    background-color: #748D92; /* Sets colour of navbar background */
-    justify-content: center; /* Centers content */
+    background-color: #748D92;
+    justify-content: center; 
     display: flex;
 }
 
 .navbar ul {
-    list-style: none; /* Removes bullet points */
+    list-style: none; 
     display: flex;
-    gap: 3.5rem; /* Provides space between navbar text */
+    gap: 3.5rem; 
     padding: 0.3rem;
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    font-family: 'Comic Neue', sans-serif; 
     font-size: 20px;
 }
 
 .navbar ul a {
     color: white; /* Changes colour of text in navbar */
-    text-decoration: none; /* Removes the underline from the text */
+    text-decoration: none; 
 }
 
 /* Adds underline of the current page the user is on */
@@ -59,13 +59,13 @@ main {
 
 /* Home page CSS */
 .start-area {
-    justify-content: center; /* centers the text to the middle */
+    justify-content: center; 
     display: flex;
     align-items: center; 
-    height: 50vh; /* Moves content down */
-    flex-direction: column; /* Lines content vertically */
+    height: 50vh; 
+    flex-direction: column; 
     gap: 40px;
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    font-family: 'Comic Neue', sans-serif; 
     font-size: 20px;
     padding: 38px;
     margin-left: 25px;
@@ -76,12 +76,12 @@ main {
 .quiz-start {
     padding: 20px;
     cursor: pointer;
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
-    border-radius: 12px; /* Gives start button a nice rounded style around it */
-    font-size: 20px; /* Changes font size */
-    background-color: #124e66; /* Sets background colour */
-    color: white; /* Sets text colour */ 
-    font-weight: bold; /* Makes text Bold */
+    font-family: 'Comic Neue', sans-serif; 
+    border-radius: 12px; 
+    font-size: 20px; 
+    background-color: #124e66; 
+    color: white; 
+    font-weight: bold; 
 }
 
 /* Hover effect on Start Quiz button */
@@ -97,16 +97,16 @@ main {
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin-left: 25px; /* Sets the margin to the left */
-    margin-right: 25px; /* Sets the margin to the right */
-    margin-bottom: 20px; /* Sets the bottom margin */
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    margin-left: 25px; 
+    margin-right: 25px; 
+    margin-bottom: 20px; 
+    font-family: 'Comic Neue', sans-serif; 
 }
 /* The Famous quotes header */
 .famous-quotes {
-    font-weight: bold; /* Gives text bold style */
-    color: #124e66; /*sets background colour */
-    font-size: 22px; /* sets font size */
+    font-weight: bold; 
+    color: #124e66;
+    font-size: 22px; 
 }
 
 /* Styles for authors for quotes section on home page */
@@ -121,17 +121,17 @@ main {
 /* Quiz Page CSS */
 /* Quiz game box */
 .container {
-    margin-top: 6rem; /* Sets space above container */ 
-    background-color: #124E66; /* Sets background colour */
-    justify-content: center; /* Centers container */
-    display: flex; /* Centers container */
-    width: 800px; /* Sets the width for the container */
-    max-width: 90%; /* Sets the max width for the container to take up space */
-    margin-left: auto; /* Automatically sets positioning to the left */
-    margin-right: auto; /* Automatically sets positioning to the right */
-    padding: 50px; /* Sets padding around the container */
-    border-radius: 15px; /* Gives container nice rounded edges */
-    box-shadow: 0 0 1px 2px; /* Gives the container a shadow around it */
+    margin-top: 6rem; 
+    background-color: #124E66; 
+    justify-content: center; 
+    display: flex; 
+    width: 800px; 
+    max-width: 90%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 50px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 1px 2px; 
 }
 
 #score-container {
@@ -226,7 +226,7 @@ main {
 .overall-scores-header {
     color: #ffffff;
     font-weight: bold;
-    font-family: 'Comic Neue', sans-serif; /* To apply text font */
+    font-family: 'Comic Neue', sans-serif; 
     text-decoration: underline;
     font-size: 24px;
     margin-top: 20px;
@@ -243,7 +243,7 @@ main {
 
 /* Social media icon styles */
 .social-icons { 
-    justify-content: center; /* To center social icons and spread them out */
+    justify-content: center; 
     display: flex;
     padding: 15px;
     list-style: none;
@@ -334,6 +334,6 @@ main {
     .overall-scores-header {
         color: #ffffff;
         font-weight: bold;
-        font-family: 'Comic Neue', sans-serif; /* To apply text font */
+        font-family: 'Comic Neue', sans-serif;
         text-decoration: underline;
     }
