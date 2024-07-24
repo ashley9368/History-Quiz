@@ -1,16 +1,12 @@
-# The Quiz Arms
+# World History Quiz
 
-![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.png)
+![World History Quiz is shown on multiple devices](assets/images/am%20i%20responsive.png)
 
-Visit the deployed site: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
+Visit the deployed site: [World History Quiz](https://ashley9368.github.io/History-Quiz/)
 
-Test your general knowledge and get pub quiz ready!
+Test your world history knowledge, See how well you can do.
 
-Pub Quizzes are played all around the world, but they are especially popular in the UK. It is estimated that over half the pubs in the UK host a regular quiz night, thats roughly 23,600 pubs!
-
-[YouGov](https://yougov.co.uk/topics/lifestyle/explore/activity/Pub_quizzes) show that 98% of people surveyed have heard of a pub quiz, and are rated as the 19th most popular social activity.
-
-During lockdowns pub quizzes remained popular - they just changed format to become virtual. This gave me the idea of creating a quiz site that would feel like a pub quiz, where users could play on their own to improve their general knowledge anywhere and at any time.
+I wanted to create a world knowledge history quiz because i love world history and what better way to learn it and test yourself then with a World knowledge history quiz, I'm sure there are others out there who feel the same.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/TheQuizArms?color=red&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/TheQuizArms?color=orange&style=for-the-badge)

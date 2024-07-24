@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+/* Hover effect */
 button:hover .btn:hover {
     background-color: #ffffff;
 }
@@ -26,7 +26,7 @@ button:hover .btn:hover {
     padding: 10px;
     color: #ffffff;
 }
-
+/* Main content */
 main {
     flex: 1 0 auto; 
     background-color: #EAE7DC;
@@ -37,7 +37,7 @@ main {
     justify-content: center; 
     display: flex;
 }
-
+/* Navigation Bar */
 .navbar ul {
     list-style: none; 
     display: flex;
@@ -46,9 +46,9 @@ main {
     font-family: 'Comic Neue', sans-serif; 
     font-size: 20px;
 }
-
+/* Styles for navbar */
 .navbar ul a {
-    color: white; /* Changes colour of text in navbar */
+    color: white; 
     text-decoration: none; 
 }
 
@@ -133,7 +133,7 @@ main {
     border-radius: 15px; 
     box-shadow: 0 0 1px 2px; 
 }
-
+/* Score throughout quiz */
 #score-container {
     justify-content: center;
     display: flex;
@@ -163,13 +163,13 @@ main {
     border: 2px solid black;
     margin-bottom: 15px;
 }
-
+/* Answer buttons for quiz */
 .btn-grid{
     display: grid;
     gap: 10px;
     margin: 20px 0;
 }
-
+/* Direct button styles */
 .btn {
     background-color: #748D92;
     color: #ffffff;
@@ -178,23 +178,23 @@ main {
     font-size: 14px;
     font-weight: bold;
 }
-
+/* Hover Colours */
 .btn:hover {
     background-color: #748D92;
     color: #000000;
 }
-
+/* Displayed Question */
 #question {
     font-size: 18px;
     color: #ffffff;
     font-weight: bold;
 }
-
+/* Begin Quiz */
 .start-btn {
     font-size: 40px;
     padding: 10px;
 }
-
+/* Hides content */
 .hide {
     display: none;
 }
@@ -223,16 +223,6 @@ main {
     border-radius: 40px;
 }
 
-.overall-scores-header {
-    color: #ffffff;
-    font-weight: bold;
-    font-family: 'Comic Neue', sans-serif; 
-    text-decoration: underline;
-    font-size: 24px;
-    margin-top: 20px;
-    text-align: center;
-}
-
 /* Footer CSS across all pages */
 /* Footer */
 .footer {
@@ -249,7 +239,7 @@ main {
     list-style: none;
     gap: 3.8rem;
 }
-
+/* Colour of social button links */
 .social-icons a {
     color: white;
 }
@@ -313,27 +303,4 @@ main {
     
     #quiz-end-message {
         font-size: 24px;
-    }
-    
-    /* Scoreboard CSS for 768 and up */
-    
-    .overall-scores-container {
-        background-color: #124E66;
-        width: 800px;
-        max-width: 70%;
-        justify-content: center;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-        padding: 40px;
-        height: 60vh;
-        border-radius: 40px;
-    }
-    
-    .overall-scores-header {
-        color: #ffffff;
-        font-weight: bold;
-        font-family: 'Comic Neue', sans-serif;
-        text-decoration: underline;
     }

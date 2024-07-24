@@ -8,15 +8,13 @@
     <meta name="description" content="quiz games, online quiz, history quiz, history, world history,">
     <meta name="keywords" content="quiz, games, knowledge, learning, learn history">
     <!-- Font Awesome fonts-->
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
     </style>
     <!-- Links Css to html -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="">
 
-    <title>World History Quiz</title> <!-- Name in tab -->
+    <title>World History Quiz</title> 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -26,41 +24,35 @@
 <body>
     <!-- Header Content -->
     <header>
-        <h1 class="heading">World History Quiz</h1> <!-- Main header for website -->
+        <h1 class="heading">World History Quiz</h1>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="quiz-page.html" class="active"> Quiz</a></li> <!-- Targets quiz page to be displayed -->
+                <li><a href="quiz-page.html" class="active"> Quiz</a></li>
             </ul>
         </nav>
     </header>
     <!-- Main Content -->
     <main>
-        <!--Multichoice quiz area-->
-        <!--When Building this area around the multichoice quiz area 
-        i relied on the same Youtube video mentioned in my JavaScript
-        about how to structure it correctly so that i can link the following
-        with my JavaScript so it can give me just the foundation to work from 
-        Please feel free to check out the video "Build A Quiz App With JavaScript"
-        for reference, i have provided the link in my ReadMe file for ease -->
+        <!-- Multichoice quiz area -->
         <div class="container">
-            <div id="question-container" class="hide"> <!-- Hide will hide the question until start button is clicked -->
-                <div id="question">Question</div> <!-- Area for questions to be displayed -->
+            <div id="question-container" class="hide"> 
+                <div id="question">Question</div> 
                 <div id="answer-buttons" class="btn-grid">
-                    <button class="btn">Answer 1</button> <!-- Buttons for each answer choice -->
+                    <button class="btn">Answer 1</button> 
                     <button class="btn">Answer 2</button>
                     <button class="btn">Answer 3</button>
                     <button class="btn">Answer 4</button>
                 </div>
             </div>
-            <div class="game-controls">
+            <div>
                 <button id="start-btn" class="start-btn btn">Start</button>
             </div>
         </div>
         <div id="score-container">
             <p>Score: <span id="score">0</span></p></div>
         <div id="quiz-end-message" class="hide"></div>
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script> <!-- Links js file to quiz page -->
     </main>
 
     <!-- Footer -->
