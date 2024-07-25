@@ -6,7 +6,7 @@ Visit the deployed site: [World History Quiz](https://ashley9368.github.io/Histo
 
 Test your world history knowledge, See how well you can do.
 
-I've always had a passion for world history, so I decided to create a world history quiz. 
+I've always had a passion for world history, so I decided to create a World History Quiz. 
 It's a fun and interactive way to learn about the past and test your knowledge. 
 Plus, I’m sure there are many others out there who share this love for history and would enjoy a quiz like this too.
 
