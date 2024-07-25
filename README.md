@@ -16,8 +16,6 @@ Plus, I’m sure there are many others out there who share this love for history
 
 * [Design](#design)
   * [Colour Scheme](#colour-scheme)
-  * [Typography](#typography)
-  * [Imagery](#imagery)
   * [Wireframes](#wireframes)
   * [Features](#features)
     * [The Home Page](#the-home-page)
@@ -29,12 +27,8 @@ Plus, I’m sure there are many others out there who share this love for history
 
 * [Deployment & Local Development](#deployment--local-development)
   * [Deployment](#deployment)
-  * [Local Development](#local-development)
-    * [How to Fork](#how-to-fork)
-    * [How to Clone](#how-to-clone)
 
 * [Testing](#testing)
-  * [Solved Bugs](#solved-bugs)
   * [Known Bugs](#known-bugs)
   
 * [Credits](#credits)
@@ -70,60 +64,63 @@ I have gone with the blue and light beige theme to give a nice clean look and fe
 
 ### Wireframes
 
-Wireframes were created for desktop using balsamiq.
+I created Wireframes using balsamiq
 
 ![Home Page](assets/images/wireframe-home-page.png)
-![Quiz page](assets/images/bal-history-desktop.png)
+![Quiz page](assets/images/wireframe-quiz-page.png)
 
 ### Features
 
-The website is comprised of a home page, a history page, and a signup page, and a basic thank you page for those who sign up.
+The website is made of a Home page and a Quiz page, with a button on the home page that takes you to the quiz page, as well as some famous quotes throughout history. The quiz page consists of a quiz game with multiple choice answers. 
 
 All Pages on the website are responsive and have:
 
 * A favicon in the browser tab.
 
-  ![favicon](assets/images/favy.png)
+  ![favicon](assets/favicon/favicon-32x32.png)
 
-* The title of the site at the top of every page. This title also acts as a link back to the home page.
-  ![Winstons Fan Club](assets/images/home.png)
+* The title of the site at the top of both pages. 
+  ![World History Quiz](assets/images/title.png)
+
+  * The navbar of the site at the top of both pages
+  ![NavBar](assets/images/navbar-img.png)
+  
+  * The start quiz button is a feature that takes you straight to the quiz
+  
+  ![Start Quiz Button](assets/images/start-quiz-btn.png)
+
+  * A footer to display social media links and to know where the page stops
+
+  ![Footer](assets/images/footer.png)
 
 #### The Home Page
 
-The home page of Winstons Fan Club displays the sites name as a title in bold text, navbar imbeded links to sub pages. It also has links to the signup and explore more history.
+The home page of World History Quiz contains a title, navbar, welcome message, start quiz button, iconic quotes, and a footer.
 
 ![Home page image](assets/images/home-page.png)
 
-The history page consists of more information about Winston Churchill at different stages in his life.
+The Quiz page consists of a page which holds the quiz game itself along with the title navbar and footer.
 
-![History page image](assets/images/history-page.png)
-
-The signup page consists of a signup form to signup for daily emails about Churchill and the Club.
-
-![Signup page image](assets/images/signup-page.png) 
+![Quiz Page](assets/images/quiz-page.png)
 
 #### Future Implementations
 
 In future implementations I would like to:
 
-1. I would like to add an interactive timeline, to let visitors explore a more interactive approach to history.
-2. I would like to make the home page more welcoming, And add more sub pages regarding specific important events in Churchill's life.
-3. I'd like to add a custom cursor when you hover over buttons. 
-4. I would like to add a video of one of Churchill's speeches.
-5. I would also like a much better thank you page.
+1. I would like to add an 404 error page, Unfortunately i have run out of time for this project or i would have done it.
+2. I would like to make a scoreboard page allowing the user to trackt their score with each visit.
+3. I'd like to add a wider range of questions and answers to give the quiz a more dynamic feel.
+4. I would like to make the questions be more shuffled so any question can come next instead of the same one over and over again.
+5. I would like to add a sign in page so the user can sign in and have a more unique feel.
 
 ### Accessibility
 
-I have included image-to-text to improve accessability for visually impaired visitors.
-
-* All of the fonts used are part of the san serif font family to help those with dyslexia to read more clearly.
-* I have used similar colours throughout the site to provide the same experience for colour blind users.
-
-![alt text](assets/images/alt-text.png)
+* All of the fonts used are part of the Comic Neue sans-serif family.
+* I have used 3 main colours throughout the project to keep the design clear and easy to navigate and understand.
 
 ### Languages Used
 
-HTML, CSS
+HTML, CSS, JavaScript
 
 ### Frameworks, Libraries & Programs Used
 
@@ -131,7 +128,7 @@ HTML, CSS
 
 * [Github](https://github.com/) - To save and store the files for the website.
 
-* [GitPod](https://gitpod.io/) - IDE used to create the site.
+* [GitPodEnterprise](https://gitpod.io/) - IDE used to create the site.
 
 * [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
 
@@ -141,43 +138,25 @@ HTML, CSS
 
 ### Deployment
 
-The site is deployed using GitHub Pages - [Winstons Fan Club](https://ashley9368.github.io/Winstons-Fanclub-Project-1/).
-
-## Testing
-
-### Solved Bugs
-
-| No | Bug | How I solved the issue |
-| :--- | :--- | :--- |
-| 1 | I had an issue with responsiveness on pages of different devices because i had written the media queries wrong, I have fixed those issue by rewritting various code across all media queries |
+The site is deployed using GitHub Pages - [World History Quiz](https://github.com/ashley9368/History-Quiz).
 
 ### Known Bugs
 
-* Known bug: Title - If you click left or right of the title on any page, it sends the user back to the homepage. I intend to fix this so that only clicking on the actual title text redirects the user to the homepage.
-
-  ![Touch Button Colour](assets/images/known-bug.png)
+* Known bug: Title - The only known bug to me at this time is that when playing the quiz on a phone, When you select an answer, where ever you last picked an answer it will have a hover like effect over the last tapped location indicating that one answer will most likely always be highlighted
 
 ## Credits
 
 ### Code Used
 
-* I used [Chat GPT](https://openai.com/index/chatgpt/) To help when i was unsure what elements to use, but never copied direct code from Chat GPT, For example, I used ChatGTP to suggest various types of fonts which would be easy to read for people with dyslexia, and if i had got stuck on something i would ask which code i was missing or how can i achieve x.
+* When working with JavaScript [JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1451s) I watched this video to help build the foundation of my JavaScript and understand features abit more that were being used that i wasn't to confident on to get more of an understanding of how things worked, So i could build my code in a similar way.
 
-* I used [Code Institute love running project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+4/courseware/e805068059af42af87681032aa64053f/1da6ad13213740f1855a51d30a2375b1/) As refrence at times to adhere to good coding practice, The code that i have copied at any point has be mentioned with a comment in my code.
+* I used [Code Institute love maths project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+3/courseware/2d651bf3f23e48aeb9b9218871912b2e/a8ec361b95e94c25bf8a821654bd57bc/) As refrence at times to to help with understanding JavaScript a bit more to be more confident in what i was building.
+
+* I used [Code Institute love running project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+5/courseware/e805068059af42af87681032aa64053f/8703311af8594e9d83c32a580cd97a14/) To refresh my memory on html and css, To follow correct practice to make a good clean website. 
 
 ### Content
 
-Except where mentioned content was created by me, except for images which were found on google, and historical facts that were generated from Chat GPT.
-
-### Media
-
-[Image on home page](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Sir_Winston_S_Churchill.jpg/1200px-Sir_Winston_S_Churchill.jpg)
-
-[Image on history page of young churchill](https://qph.cf2.quoracdn.net/main-qimg-fc196db16dcd9211403a84c827b3fc42-lq)
-[Image on history page of adult chuchill](https://archives.chu.cam.ac.uk/wp-content/uploads/sites/2/2022/01/CHUR-1-103tn.jpg)
-[Image on history page of later life churchill](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2id3sVkOKr2l33fJwhOqbYXTQFS3vzDS3LQ&s)
-
-[Image on signup page of churchill](https://i.ebayimg.com/images/g/rsQAAOSwIWZh6EhZ/s-l1600.webp) 
+All content was created by me unless mentioned where i had support from the above content to help me get started or understand what exactly i was building.
 
 ### Acknowledgments
 
@@ -185,6 +164,6 @@ I would like to acknowledge the following people:
 
 * Jubril Akolade - My Code Institute Mentor.
 
-* The code instutue tutor team, (Not all but to name afew) Roo and Holly.
+* The code instutue tutor team, Roo and Holly.
 
-* The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to play the quiz and look over the code.
+* The Code Institute Slack channel.
