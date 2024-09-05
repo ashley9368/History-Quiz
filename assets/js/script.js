@@ -7,10 +7,12 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreHidden = document.getElementById('quiz-end-message');
 const scoreElement = document.getElementById('score');
 
-let currentQuestionIndex = 0;
 // Keeps track of the current question index
-let score = 0;
+let currentQuestionIndex = 0;
+
 // Keeps track of the users score
+let score = 0;
+
 
 // Starts Quiz
 startButton.addEventListener('click', startQuiz);
@@ -25,6 +27,7 @@ function startQuiz() {
   currentQuestionIndex = 0; 
   showQuestion(); 
 }
+
 // Updates score 
 function UpdateScore(points) {
   if (score + points < 0) {
@@ -34,22 +37,33 @@ function UpdateScore(points) {
   }
   scoreElement.textContent = score;
 }
+
 // Displays question
 function showQuestion() {
-  const currentQuestion = quizQuestions[currentQuestionIndex]; 
+  if (!quizQuestions || quizQuestions.length === 0) {
+    console.error('No quiz questions available.');
+    return;
+  }
+
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+  if(!currentQuestion || !currentQuestion.answers) {
+    console.error('Invalid question or answers.');
+    return;
+  }
+
   questionElement.innerHTML = '';
   answerButtonsElement.innerHTML = '';
-  questionContainer.classList.remove('correct', 'incorrect');  
-  questionElement.textContent = currentQuestion.question;  
-  
+  questionContainer.classList.remove('correct', 'incorrect');
+  questionElement.textContent = currentQuestion.question;
+
   // Buttons for each answer
-  for (let i = 0; i < currentQuestion.answers.length; i++) {
-    const button = document.createElement('button'); 
-    button.innerText = currentQuestion.answers[i]; 
-    button.classList.add('btn'); 
-    button.addEventListener('click', () => checkAnswer(i)); 
-    answerButtonsElement.appendChild(button); 
-  }
+  currentQuestion.answers.forEach((answer, i) => {
+    const button = document.createElement('button');
+    button.innerText = answer;
+    button.classList.add('btn');
+    button.addEventListener('click', () => checkAnswer(i));
+    answerButtonsElement.appendChild(button);
+  });
 }
 
   function checkAnswer(answerIndex) {
@@ -83,8 +97,8 @@ function showQuestion() {
 
     // Move to next question or end quiz
     if (currentQuestionIndex >= quizQuestions.length) {
-      endQuiz();
       // calls the 'endQuiz' function if there are no more questions
+      endQuiz();
     } else {
       showQuestion();
       // Calls the 'showQuestion' function to display the next question if there are more questions

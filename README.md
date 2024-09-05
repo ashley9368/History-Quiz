@@ -138,6 +138,11 @@ HTML, CSS, JavaScript
 
 ### Deployment
 
+Go to the settings tab of your github repository.
+Under Github pages, select the main(or master) branch from the source dropdown menu.
+The page will refresh and display a success message at the top.
+Your site is now live at the URL provided by GitHub pages.
+
 The site is deployed using GitHub Pages - [World History Quiz](https://github.com/ashley9368/History-Quiz).
 
 ### Known Bugs
