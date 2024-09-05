@@ -42,7 +42,7 @@ function showQuestion() {
   questionContainer.classList.remove('correct', 'incorrect');  
   questionElement.textContent = currentQuestion.question;  
   
-  //Buttons for each answer
+  // Buttons for each answer
   for (let i = 0; i < currentQuestion.answers.length; i++) {
     const button = document.createElement('button'); 
     button.innerText = currentQuestion.answers[i]; 
@@ -50,12 +50,16 @@ function showQuestion() {
     button.addEventListener('click', () => checkAnswer(i)); 
     answerButtonsElement.appendChild(button); 
   }
-  }
+}
 
   function checkAnswer(answerIndex) {
-    const currentQuestion = quizQuestions[currentQuestionIndex]; // Same as line 30
-    // Targets the main quiz container
-    const mainQuizContainer = document.querySelector('.container'); 
+    const currentQuestion = quizQuestions[currentQuestionIndex]; 
+    const mainQuizContainer = document.querySelector('.container');
+
+    // Disable all answer buttons
+    const answerButtons = document.querySelectorAll('.btn')
+    answerButtons.forEach(button => button.disabled = true);
+
     // Change the background color based on the answer
     if (answerIndex === currentQuestion.correctAnswer) {
       mainQuizContainer.style.backgroundColor = 'green';
@@ -68,9 +72,9 @@ function showQuestion() {
       // Sets the background color of the mainQuizContainer to red if the selected answer is incorrect
     }
 
-    // Goes to the next question
-    currentQuestionIndex++;
     //Increments the question index to move to the next question
+    currentQuestionIndex++;
+    
 
     // Reset background color after a delay
     setTimeout(() => {
