@@ -27,7 +27,11 @@ function startQuiz() {
 }
 // Updates score 
 function UpdateScore(points) {
-  score += points;
+  if (score + points < 0) {
+    score = 0;
+  } else {
+    score += points;
+  }
   scoreElement.textContent = score;
 }
 // Displays question
